@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 69007684}
   m_Layer: 0
   m_Name: wall r
-  m_TagString: Untagged
+  m_TagString: wall_r
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1425,9 +1425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a2c4816eedd40449bd514a689de630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
-  GameManager: {fileID: 1920325481}
-  Collider: {fileID: 0}
+  velocity: 20
+  gameManager: {fileID: 1920325481}
 --- !u!1 &1626076521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,7 +1439,7 @@ GameObject:
   - component: {fileID: 1626076522}
   m_Layer: 0
   m_Name: wall l
-  m_TagString: Untagged
+  m_TagString: wall_l
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1728,8 +1727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b01296e68fea05418c2f1a5c0f819f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuntosP1: 6
-  PuntosP2: 7
+  PuntosP1: 0
+  PuntosP2: 0
   Marcador: 
   MarcadorText: {fileID: 735868048}
 --- !u!1660057539 &9223372036854775807

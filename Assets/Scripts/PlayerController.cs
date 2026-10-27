@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         {
             nuevaY = topheight;
         }
-        if (nuevaY < botheight)// Bottom Margol
+        if (nuevaY < botheight)// soy chino y como perro
         {
             nuevaY = botheight;
         }
