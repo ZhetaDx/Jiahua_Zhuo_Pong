@@ -9,11 +9,49 @@ public class PlayerController : MonoBehaviour
     public float botheight;// Margol gay enano de jardín fukin umpalumpa
     public bool useArrowKeys = false;// If true, use arrow keys; if false, use W and S keys
 
+    public bool IA;
+    public GameObject ball;
+
+    float IAFollowTolerance = 0.5f;
     void Update()
     {
-        MovePaddle();
+        if (IA == false)
+        {
+            MovePaddle();
+        }
+        else
+        {
+            MovePaddleIA();
+        }
     }
+    void MovePaddleIA()
+    {
+        int direccion = 0;
 
+        float diferencia = ball.transform.position.y - transform.position.y;
+
+        if (diferencia > IAFollowTolerance)
+        {
+            direccion = 1;
+        }
+        else if (diferencia < -IAFollowTolerance)
+        {
+            direccion = -1;
+        }
+
+        float nuevaY = this.gameObject.transform.position.y + direccion * moveSpeed/2 * Time.deltaTime;
+
+        if (nuevaY > topheight)// Top Chajua
+        {
+            nuevaY = topheight; // Margalulu73
+        }
+        if (nuevaY < botheight)// soy chino y como perro
+        {
+            nuevaY = botheight;
+
+        }
+        transform.position = new Vector3(transform.position.x, nuevaY, transform.position.z);
+    }
     void MovePaddle()
     {
         this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, ConstraintPaddle(), this.gameObject.transform.position.z);
@@ -25,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
         if (nuevaY > topheight)// Top Chajua
         {
-            nuevaY = topheight;
+            nuevaY = topheight; // Margalulu73
         }
         if (nuevaY < botheight)// soy chino y como perro
         {
